@@ -18,4 +18,19 @@ void erotosthenes_sieve(int n,int a[n])
 {
   int i,j;
   for(i=1;i<n;i++)
+    {
+      if(a[i]==0)
+        continue;
+      for(j=a[i]+1;j<=n;j++)
+        {
+          if(j%a[i]==0)
+            a[j-1]=0;
+        }
+    } 
+
+  }
+void output(int n,int a[n]) 
+{
+  
 }
+
